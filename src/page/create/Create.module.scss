@@ -1,0 +1,13 @@
+.Create{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  >header{
+    margin: 10px 0;
+  }
+  >.content{
+    border-radius: 2px;
+    background: #ccc3;
+    flex: 1;
+  }
+}
