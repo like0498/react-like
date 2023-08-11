@@ -1,4 +1,9 @@
 
+html,
+body {
+  height: 100%;
+}
+
 body,
 div,
 dl,
@@ -21,9 +26,47 @@ textarea,
 p,
 blockquote,
 th,
-td,
-mat-select {
+td{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
 }

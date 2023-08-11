@@ -1,0 +1,7 @@
+{
+  "^/vip/.*.do$": {
+    "target": "https://vip.qiuer.cc/",
+    "changeOrigin": true,
+    "secure": false
+  }
+}

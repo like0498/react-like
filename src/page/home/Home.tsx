@@ -24,13 +24,13 @@ const HomePage = memo(forwardRef((prop: HomePageProp, ref: any) => {
     // submit code
   }, []);
   const ids = useMemo(() => {
-    console.log(111);
-    return [1,2,3,4,5, prop.id];
+    console.log('useMemo');
+    return [2,3,4,5, prop.id];
   }, [prop.id])
   console.log('MemoTestRef', MemoTestRef);
   
   return (
-    <div ref={ref} className={`${style.Home}`} bg={`${theme} hover:blue`}>
+    <div ref={ref} className={`${style.Home} ${theme}`} bg="#ccc3 hover:blue">
       <NavLink to='/'>
         <Button ref={button} className={buttonStyle} onClick={() => prop.onClickBtn('我的问卷')}>我的问卷</Button>
       </NavLink>
@@ -41,7 +41,7 @@ const HomePage = memo(forwardRef((prop: HomePageProp, ref: any) => {
       <input type="text" placeholder='MemoTest will update' value={name} onChange={e => setName(e.target.value)} />
       <MemoTest ref={MemoTestRef} name={name}></MemoTest>
       <UseCallbackTest onSubmit={onSubmit}></UseCallbackTest>
-      {ids.map(item => (<div>{item}</div>))}
+      {ids.map(item => (<div key={item}>{item}</div>))}
     </div>
   );
 }));
