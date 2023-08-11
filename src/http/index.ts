@@ -1,16 +1,10 @@
-import axios, { AxiosError, AxiosRequestConfig } from "axios";
+import axios, { AxiosError } from "axios";
 import { message } from "antd";
-import { ResponseData } from "../types";
 
-const http = axios.create({
-  baseURL: '/vip/',
-  timeout: 10000,
-  headers: {
-    'x-platform': 'web'
-  }
-});
-
-http.interceptors.response.use(response => response, error => {
+axios.defaults.baseURL = '/vip/';
+axios.defaults.timeout = 10000;
+axios.defaults.headers['X-Platform'] = 'web';
+axios.interceptors.response.use(response => response, error => {
   return handleError(error);
 })
 
@@ -29,11 +23,3 @@ function handleError(error: AxiosError){
   }
   return Promise.reject(error);
 }
-
-function postData(url: string, param?: any, config?: AxiosRequestConfig){
-  return http.post<ResponseData>(url, param, config).then(res => res.data);
-}
-export default {
-  http,
-  postData
-};

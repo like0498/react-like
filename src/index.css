@@ -1,6 +1,16 @@
 
+:root {
+  --vip-black-normal: #4f566d;
+  --vip-black-sub: #7b8194;
+  --vip-black-disabled: #8f94a4;
+  --vip-warn: #ff7d18;
+}
+html{
+  color: var(--vip-black-normal);
+}
 html,
-body {
+body,
+#root {
   height: 100%;
 }
 
