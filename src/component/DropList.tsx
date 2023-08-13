@@ -3,10 +3,11 @@ import Sortable from "sortablejs";
 
 interface DropListParam{
   items: ReactNode[];
-  onEnd: (pre: number, cur: number) => any
+  className?: string;
+  onEnd?: (pre: number, cur: number) => any
 }
 
-const DropList: React.FC<DropListParam> = ({items, onEnd}) => {
+const DropList: React.FC<DropListParam> = ({items, className, onEnd}) => {
   const ref = useRef(null);
   useEffect(() => {
     Sortable.create(ref.current, {
@@ -18,7 +19,7 @@ const DropList: React.FC<DropListParam> = ({items, onEnd}) => {
     })
   }, [ref]);
   return (
-    <div ref={ref}>{items}</div>
+    <div className={className} ref={ref}>{items}</div>
   )
 }
 

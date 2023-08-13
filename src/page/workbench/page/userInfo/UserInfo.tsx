@@ -4,13 +4,13 @@ import { useCallback, useMemo, useState } from "react";
 const UserInfoPage = () => {
   const [data] = useState([
     {
-      name: 'like',
+      name: 'red',
       color: 'bg-red'
     },{
-      name: 'nase',
+      name: 'orange',
       color: 'bg-orange'
     },{
-      name: 'quews',
+      name: 'yellow',
       color: 'bg-yellow'
     },{
       name: 'green',
@@ -18,6 +18,12 @@ const UserInfoPage = () => {
     },{
       name: 'blue',
       color: 'bg-blue'
+    },{
+      name: 'cyan',
+      color: 'bg-cyan'
+    },{
+      name: 'purple',
+      color: 'bg-purple'
     },
   ]);
 
@@ -25,11 +31,12 @@ const UserInfoPage = () => {
     <div key={i} className={`${item.color} font-bold text-20px text-center p-10px cursor-move`}>{item.name}</div>
   )), [data]);
 
-  const moveItem = useCallback((pre, cur) => {
+  const cachedMoveItem = useCallback((pre, cur) => {
     moveItemInArray(data, pre, cur);
-  }, [data])
+  }, [data]);
+
   return (
-    <DropList items={cachedData} onEnd={moveItem}></DropList>
+    <DropList items={cachedData} onEnd={cachedMoveItem}></DropList>
   )
  }
 
