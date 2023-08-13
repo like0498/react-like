@@ -12,12 +12,12 @@
 ## UnoCSS : unocss 代码提示
 
 # 目录结构
-page
-|-- component (文件夹)
-|-- page (文件夹)
-|-- page.tsx
-|-- page.module.scss
-|-- page.style.ts
-|-- interface.ts
-|-- api.ts
-|-- route.tsx
+page  
+|-- component (文件夹)  
+|-- page (文件夹)  
+|-- page.tsx  
+|-- page.module.scss  
+|-- page.style.ts  
+|-- interface.ts  
+|-- api.ts  
+|-- route.tsx  
