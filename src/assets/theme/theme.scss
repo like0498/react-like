@@ -2,3 +2,36 @@
 :root{
   --theme: #1669BE;
 }
+
+// Menu
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light, :where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light>.ant-menu{
+  color: inherit;
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light .ant-menu-item-selected, :where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light>.ant-menu .ant-menu-item-selected{
+  background-color: var(--theme);
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light .ant-menu-item-selected, :where(.css-dev-only-do-not-override-fpg3f5).ant-menu-light>.ant-menu .ant-menu-item-selected{
+  color: #fff;
+}
+// Layout
+:where(.css-dev-only-do-not-override-fpg3f5).ant-layout{
+  background: transparent;
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-layout-header{
+  height: unset;
+  padding-inline: 0;
+  color: inherit;
+  line-height: unset;
+  background: transparent;
+}
+:where(.css-dev-only-do-not-override-fpg3f5).ant-layout .ant-layout-sider{
+  background: transparent;
+}
+// sortablejs
+.sortable-ghost{
+  opacity: .3 !important;
+}
+.sortable-fallback, .sortable-drag{
+  opacity: 1 !important;
+  cursor: move;
+}

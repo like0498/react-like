@@ -21,6 +21,7 @@ specifiers:
   react-dom: ^18.2.0
   react-router-dom: ^6.14.2
   sass: ^1.65.1
+  sortablejs: ^1.15.0
   typescript: ^5.0.2
   unocss: ^0.55.0
   vite: ^4.4.5
@@ -34,6 +35,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.14.2_react-dom@18.2.0+react@18.2.0
+  sortablejs: 1.15.0
 
 devDependencies:
   '@types/lodash': 4.14.197
@@ -3134,6 +3136,10 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /sortablejs/1.15.0:
+    resolution: {integrity: sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==}
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

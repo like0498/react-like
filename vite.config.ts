@@ -5,9 +5,15 @@ import UnoCSS from 'unocss/vite';
 import presetAttributify from '@unocss/preset-attributify';
 import presetUno from '@unocss/preset-uno';
 import proxy from "./proxy.conf.json";
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve('src')
+    }
+  },
   server: {
     port: 8080,
     proxy

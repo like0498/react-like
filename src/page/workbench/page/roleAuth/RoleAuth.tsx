@@ -1,4 +1,3 @@
-import { memo } from "react";
 
 const RoleAuthPage = () => {
   return (
@@ -6,4 +5,4 @@ const RoleAuthPage = () => {
   )
  }
 
- export default memo(RoleAuthPage);
+ export default RoleAuthPage;
